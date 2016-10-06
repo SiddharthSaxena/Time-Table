@@ -13,54 +13,49 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
 
-        <Button android:id="@id/Monday"
+        <Button android:id="@+id/Monday"
             android:layout_width="150.0dip"
             android:layout_height="wrap_content"
             android:layout_marginTop="61.0dip"
             android:text="@string/monday"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:onClick="Monday"
-            style="@style/MainButton" />
+            android:onClick="Monday" />
 
-        <Button android:id="@id/Tuesday"
+        <Button android:id="@+id/Tuesday"
             android:layout_width="150.0dip"
             android:layout_height="wrap_content"
             android:layout_marginTop="15.0dip"
             android:text="@string/tuesday"
             android:layout_below="@id/Monday"
             android:layout_centerHorizontal="true"
-            android:onClick="Tuesday"
-            style="@style/MainButton" />
+            android:onClick="Tuesday" />
 
-        <Button android:id="@id/Wednesday"
+        <Button android:id="@+id/Wednesday"
             android:layout_width="150.0dip"
             android:layout_height="wrap_content"
             android:layout_marginTop="15.0dip"
             android:text="@string/wednesday"
             android:layout_below="@id/Tuesday"
             android:layout_centerHorizontal="true"
-            android:onClick="Wednesday"
-            style="@style/MainButton" />
+            android:onClick="Wednesday" />
 
-        <Button android:id="@id/Thursday"
+        <Button android:id="@+id/Thursday"
             android:layout_width="150.0dip"
             android:layout_height="wrap_content"
             android:layout_marginTop="15.0dip"
             android:text="@string/thursday"
             android:layout_below="@id/Wednesday"
             android:layout_centerHorizontal="true"
-            android:onClick="Thursday"
-            style="@style/MainButton" />
+            android:onClick="Thursday" />
 
-        <Button android:id="@id/Friday"
+        <Button android:id="@+id/Friday"
             android:layout_width="150.0dip"
             android:layout_height="wrap_content"
             android:layout_marginTop="15.0dip"
             android:text="@string/friday"
             android:layout_below="@id/Thursday"
             android:layout_centerHorizontal="true"
-            android:onClick="Friday"
-            style="@style/MainButton" />
+            android:onClick="Friday" />
     </RelativeLayout>
 </ScrollView>
