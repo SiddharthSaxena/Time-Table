@@ -7,50 +7,41 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-public class MainActivity
-        extends AppCompatActivity
-{
-    public void Friday(View paramView)
-    {
+public class MainActivity extends AppCompatActivity {
+
+    public void Friday(View view) {
         startActivity(new Intent(this, Friday.class));
     }
 
-    public void Monday(View paramView)
-    {
+    public void Monday(View view) {
         startActivity(new Intent(this, Monday.class));
     }
 
-    public void Thursday(View paramView)
-    {
+    public void Thursday(View view) {
         startActivity(new Intent(this, Thursday.class));
     }
 
-    public void Tuesday(View paramView)
-    {
+    public void Tuesday(View view) {
         startActivity(new Intent(this, Tuesday.class));
     }
 
-    public void Wednesday(View paramView)
-    {
+    public void Wednesday(View view) {
         startActivity(new Intent(this, Wednesday.class));
     }
 
-    protected void onCreate(Bundle paramBundle)
-    {
-        super.onCreate(paramBundle);
+    protected void onCreate(Bundle bundle) {
+        super.onCreate(bundle);
         setContentView(2130903066);
     }
 
-    public boolean onCreateOptionsMenu(Menu paramMenu)
-    {
+    public boolean onCreateOptionsMenu(Menu menu) {
         return true;
     }
 
-    public boolean onOptionsItemSelected(MenuItem paramMenuItem)
-    {
-        if (paramMenuItem.getItemId() == 2131427438) {
+    public boolean onOptionsItemSelected(MenuItem menuItem) {
+        if (menuItem.getItemId() == 2131427438) {
             return true;
         }
-        return super.onOptionsItemSelected(paramMenuItem);
+        return super.onOptionsItemSelected(menuItem);
     }
 }
