@@ -1,3 +1,13 @@
 <resources>
-    <string name="app_name">Time Table</string>
+    <string name="app_name">Time Table β</string>
+    <string name="friday">FRIDAY</string>
+    <string name="monday">MONDAY</string>
+    <string name="thursday">THURSDAY</string>
+    <string name="title_activity_friday">Friday</string>
+    <string name="title_activity_monday">Monday</string>
+    <string name="title_activity_thursday">Thursday</string>
+    <string name="title_activity_tuesday">Tuesday</string>
+    <string name="title_activity_wednesday">Wednesday</string>
+    <string name="tuesday">TUESDAY</string>
+    <string name="wednesday">WEDNESDAY</string>
 </resources>
