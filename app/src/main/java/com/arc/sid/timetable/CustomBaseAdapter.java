@@ -40,9 +40,9 @@ public class CustomBaseAdapter extends BaseAdapter {
         {
             view = this.mInflater.inflate(R.layout.custom_row_viewer, null);
             viewGroup = new ViewHolder();
-            viewGroup.txtPeriodName = ((TextView)view.findViewById(2131427422));
-            viewGroup.txtFaculty = ((TextView)view.findViewById(2131427423));
-            viewGroup.txtTiming = ((TextView)view.findViewById(2131427424));
+            viewGroup.txtPeriodName = ((TextView)view.findViewById(R.id.periodName));
+            viewGroup.txtFaculty = ((TextView)view.findViewById(R.id.faculty));
+            viewGroup.txtTiming = ((TextView)view.findViewById(R.id.timing));
             view.setTag(viewGroup);
         }
         for (;;)
