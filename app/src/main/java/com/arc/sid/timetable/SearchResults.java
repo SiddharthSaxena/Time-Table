@@ -6,33 +6,27 @@ public class SearchResults
     private String periodName = "";
     private String timing = "";
 
-    public String getFaculty()
-    {
+    public String getFaculty() {
         return this.faculty;
     }
 
-    public String getPeriodName()
-    {
+    public String getPeriodName() {
         return this.periodName;
     }
 
-    public String getTiming()
-    {
+    public String getTiming() {
         return this.timing;
     }
 
-    public void setFaculty(String paramString)
-    {
+    public void setFaculty(String paramString) {
         this.faculty = paramString;
     }
 
-    public void setPeriodName(String paramString)
-    {
+    public void setPeriodName(String paramString) {
         this.periodName = paramString;
     }
 
-    public void setTiming(String paramString)
-    {
+    public void setTiming(String paramString) {
         this.timing = paramString;
     }
 }
