@@ -2,6 +2,7 @@ package com.arc.sid.timetable;
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -15,80 +16,124 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.Calendar;
 
-public class Thursday
-        extends AppCompatActivity
-{
-    private ArrayList<SearchResults> GetSearchResults()
-    {
-        ArrayList localArrayList = new ArrayList();
-        SearchResults localSearchResults = new SearchResults();
-        localSearchResults.setPeriodName("Data Communication and Networking Lab");
-        localSearchResults.setFaculty("Mr. Davender Banga");
-        localSearchResults.setTiming("8:30 am - 10:05 am");
-        localArrayList.add(localSearchResults);
-        localSearchResults = new SearchResults();
-        localSearchResults.setPeriodName("Antenna and Wave Propagation");
-        localSearchResults.setFaculty("Mrs. Medha Hooda");
-        localSearchResults.setTiming("10:05 am - 11:00 am");
-        localArrayList.add(localSearchResults);
-        localSearchResults = new SearchResults();
-        localSearchResults.setPeriodName("Lunch Break");
-        localSearchResults.setFaculty("Break");
-        localSearchResults.setTiming("11:00 am - 11:30 am");
-        localArrayList.add(localSearchResults);
-        localSearchResults = new SearchResults();
-        localSearchResults.setPeriodName("VLSI Design");
-        localSearchResults.setFaculty("Dr. Rajiv Sharma");
-        localSearchResults.setTiming("11:30 am - 12:25 pm");
-        localArrayList.add(localSearchResults);
-        localSearchResults = new SearchResults();
-        localSearchResults.setPeriodName("Digital Signal Processing");
-        localSearchResults.setFaculty("Mr. Surender Dhiman");
-        localSearchResults.setTiming("12:25 pm - 1:20 pm");
-        localArrayList.add(localSearchResults);
-        localSearchResults = new SearchResults();
-        localSearchResults.setPeriodName("Information Theory and Coding");
-        localSearchResults.setFaculty("Mr. Kamal Singh");
-        localSearchResults.setTiming("1:20 pm - 2:15 pm");
-        localArrayList.add(localSearchResults);
-        localSearchResults = new SearchResults();
-        localSearchResults.setPeriodName("Data Communication and Networking");
-        localSearchResults.setFaculty("Mr. Davender Banga");
-        localSearchResults.setTiming("2:15 pm - 3:10 pm");
-        localArrayList.add(localSearchResults);
-        return localArrayList;
+public class Thursday extends AppCompatActivity {
+
+    private ArrayList<SearchResults> GetSearchResults() {
+
+        ArrayList<SearchResults> results = new ArrayList<>();
+
+        SearchResults searchResults = new SearchResults();
+        searchResults.setPeriodName("Microwave Engineering");
+        searchResults.setFaculty("Mr. Devraj Gautam");
+        searchResults.setTiming("8:30 am - 9:10 am");
+        results.add(searchResults);
+
+        searchResults = new SearchResults();
+        searchResults.setPeriodName("Digital Signal Processing");
+        searchResults.setFaculty("Dr. Surender Dhiman");
+        searchResults.setTiming("9:10 am - 10:05 am");
+        results.add(searchResults);
+
+        searchResults = new SearchResults();
+        searchResults.setPeriodName("VLSI Design");
+        searchResults.setFaculty("Dr. Rajiv Sharma");
+        searchResults.setTiming("10:05 am - 11:00 am");
+        results.add(searchResults);
+
+        searchResults = new SearchResults();
+        searchResults.setPeriodName("Lunch Break");
+        searchResults.setFaculty("Break");
+        searchResults.setTiming("11:00 am - 11:30 am");
+        results.add(searchResults);
+
+        searchResults = new SearchResults();
+        searchResults.setPeriodName("Antenna and Wave Propagation");
+        searchResults.setFaculty("Mrs. Medha Hooda");
+        searchResults.setTiming("11:30 am - 12:25 pm");
+        results.add(searchResults);
+
+        searchResults = new SearchResults();
+        searchResults.setPeriodName("Data Communication and Networking");
+        searchResults.setFaculty("Mr. Davender Banga");
+        searchResults.setTiming("12:25 pm - 1:20 pm");
+        results.add(searchResults);
+
+        return results;
     }
 
-    public void onCreate(Bundle paramBundle)
-    {
-        super.onCreate(paramBundle);
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_thursday);
-        paramBundle = GetSearchResults();
-        final Object localObject = (ListView)findViewById(2131427417);
-        ((ListView)localObject).setAdapter(new CustomBaseAdapter(this, paramBundle));
-        ((ListView)localObject).setOnItemClickListener(new AdapterView.OnItemClickListener()
-        {
-            public void onItemClick(AdapterView<?> paramAnonymousAdapterView, View paramAnonymousView, int paramAnonymousInt, long paramAnonymousLong)
-            {
-                paramAnonymousAdapterView = (SearchResults)localObject.getItemAtPosition(paramAnonymousInt);
-                Toast.makeText(Thursday.this, "Period :  " + paramAnonymousAdapterView.getPeriodName() + "\nLecturer : " + " " + paramAnonymousAdapterView.getFaculty() + "\nTimings : " + " " + paramAnonymousAdapterView.getTiming(), 1).show();
+
+        ArrayList<SearchResults> searchResults = GetSearchResults();
+
+        final ListView periods = (ListView) findViewById(R.id.thursdayList);
+        periods.setAdapter(new CustomBaseAdapter(this, searchResults));
+
+        periods.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> a, View v, int position, long id) {
+                Object period = periods.getItemAtPosition(position);
+                SearchResults fullObject = (SearchResults) period;
+                Toast.makeText(Thursday.this, "Period : " + " " + fullObject.getPeriodName() + "\nLecturer : "
+                        + " " + fullObject.getFaculty() + "\nTimings : " + " " + fullObject.getTiming(), Toast.LENGTH_LONG).show();
             }
         });
-        paramBundle = (AlarmManager)getSystemService("alarm");
-        localObject = PendingIntent.getBroadcast(this, 0, new Intent(this, ThursdayNotificationService.class), 0);
-        paramBundle.set(1, Calendar.getInstance().getTimeInMillis() + 30000L, (PendingIntent)localObject);
+
+        AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTimeInMillis(System.currentTimeMillis());
+
+        Intent firstIntent = new Intent(this, ThursdayNotificationService.class);
+        firstIntent.setAction("FirstPeriod");
+        PendingIntent firstAlarmIntent = PendingIntent.getBroadcast(this, 100, firstIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+        calendar.set(2016, 3, 23, 20, 40, 0);
+        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), firstAlarmIntent);
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY * 7, firstAlarmIntent);
+
+        Intent secondIntent = new Intent(this, ThursdayNotificationService.class);
+        secondIntent.setAction("SecondPeriod");
+        PendingIntent secondAlarmIntent = PendingIntent.getBroadcast(this, 101, secondIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+        calendar.set(2016, 3, 23, 20, 12, 0);
+        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), secondAlarmIntent);
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY * 7, secondAlarmIntent);
+
+        Intent thirdIntent = new Intent(this, ThursdayNotificationService.class);
+        thirdIntent.setAction("ThirdPeriod");
+        PendingIntent thirdAlarmIntent = PendingIntent.getBroadcast(this, 102, thirdIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+        calendar.set(2016, 3, 23, 20, 12, 0);
+        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), thirdAlarmIntent);
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY * 7, thirdAlarmIntent);
+
+        Intent fourthIntent = new Intent(this, ThursdayNotificationService.class);
+        fourthIntent.setAction("FourthPeriod");
+        PendingIntent fourthAlarmIntent = PendingIntent.getBroadcast(this, 103, fourthIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+        calendar.set(2016, 3, 23, 20, 12, 0);
+        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), fourthAlarmIntent);
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY * 7, fourthAlarmIntent);
+
+        Intent fifthIntent = new Intent(this, ThursdayNotificationService.class);
+        fifthIntent.setAction("FifthPeriod");
+        PendingIntent fifthAlarmIntent = PendingIntent.getBroadcast(this, 104, fifthIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+        calendar.set(2016, 3, 23, 20, 12, 0);
+        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), fifthAlarmIntent);
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY * 7, fifthAlarmIntent);
+
+        Intent sixthIntent = new Intent(this, ThursdayNotificationService.class);
+        sixthIntent.setAction("SixthPeriod");
+        PendingIntent sixthAlarmIntent = PendingIntent.getBroadcast(this, 105, sixthIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+        calendar.set(2016, 3, 23, 20, 12, 0);
+        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), sixthAlarmIntent);
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY * 7, sixthAlarmIntent);
     }
 
-    public boolean onCreateOptionsMenu(Menu paramMenu)
-    {
+    public boolean onCreateOptionsMenu(Menu menu) {
         return true;
     }
 
-    public boolean onOptionsItemSelected(MenuItem paramMenuItem)
-    {
-        if (paramMenuItem.getItemId() == 2131427438) {
-            return true;
-        }
-        return super.onOptionsItemSelected(paramMenuItem);
+    public boolean onOptionsItemSelected(MenuItem menuItem) {
+        return menuItem.getItemId() == R.id.action_settings || super.onOptionsItemSelected(menuItem);
     }
 }
