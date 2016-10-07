@@ -38,7 +38,7 @@ public class CustomBaseAdapter extends BaseAdapter {
     {
         if (view == null)
         {
-            view = this.mInflater.inflate(2130903071, null);
+            view = this.mInflater.inflate(R.layout.custom_row_viewer, null);
             viewGroup = new ViewHolder();
             viewGroup.txtPeriodName = ((TextView)view.findViewById(2131427422));
             viewGroup.txtFaculty = ((TextView)view.findViewById(2131427423));
