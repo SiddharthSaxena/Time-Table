@@ -20,7 +20,7 @@ public class TuesdayNotificationService extends BroadcastReceiver {
 
         if (intent.getAction().equalsIgnoreCase("FirstPeriod")) {
             builder.setContentText("Microwave Engineering");
-            builder.setContentIntent(PendingIntent.getActivity(context, 100, new Intent(context, Monday.class), 0));
+            builder.setContentIntent(PendingIntent.getActivity(context, 100, new Intent(context, Tuesday.class), 0));
             Notification notification = builder.build();
             builder.setAutoCancel(true);
             int notificationID = 100;
@@ -35,9 +35,10 @@ public class TuesdayNotificationService extends BroadcastReceiver {
             }, delayInMilliseconds);
 
         }
+
         if (intent.getAction().equalsIgnoreCase("SecondPeriod")) {
             builder.setContentText("Digital Signal Processing");
-            builder.setContentIntent(PendingIntent.getActivity(context, 101, new Intent(context, Monday.class), 0));
+            builder.setContentIntent(PendingIntent.getActivity(context, 101, new Intent(context, Tuesday.class), 0));
             Notification notification = builder.build();
             int notificationID = 101;
             builder.setAutoCancel(true);
@@ -48,6 +49,74 @@ public class TuesdayNotificationService extends BroadcastReceiver {
             handler.postDelayed(new Runnable() {
                 public void run() {
                     notificationManager.cancel(101);
+                }
+            }, delayInMilliseconds);
+        }
+
+        if (intent.getAction().equalsIgnoreCase("ThirdPeriod")) {
+            builder.setContentText("Digital Signal Processing");
+            builder.setContentIntent(PendingIntent.getActivity(context, 102, new Intent(context, Tuesday.class), 0));
+            Notification notification = builder.build();
+            int notificationID = 102;
+            builder.setAutoCancel(true);
+            notificationManager.notify(notificationID, notification);
+
+            Handler handler = new Handler();
+            long delayInMilliseconds = 300000;
+            handler.postDelayed(new Runnable() {
+                public void run() {
+                    notificationManager.cancel(102);
+                }
+            }, delayInMilliseconds);
+        }
+
+        if (intent.getAction().equalsIgnoreCase("FourthPeriod")) {
+            builder.setContentText("Digital Signal Processing");
+            builder.setContentIntent(PendingIntent.getActivity(context, 103, new Intent(context, Tuesday.class), 0));
+            Notification notification = builder.build();
+            int notificationID = 103;
+            builder.setAutoCancel(true);
+            notificationManager.notify(notificationID, notification);
+
+            Handler handler = new Handler();
+            long delayInMilliseconds = 300000;
+            handler.postDelayed(new Runnable() {
+                public void run() {
+                    notificationManager.cancel(103);
+                }
+            }, delayInMilliseconds);
+        }
+
+        if (intent.getAction().equalsIgnoreCase("FifthPeriod")) {
+            builder.setContentText("Digital Signal Processing");
+            builder.setContentIntent(PendingIntent.getActivity(context, 104, new Intent(context, Tuesday.class), 0));
+            Notification notification = builder.build();
+            int notificationID = 104;
+            builder.setAutoCancel(true);
+            notificationManager.notify(notificationID, notification);
+
+            Handler handler = new Handler();
+            long delayInMilliseconds = 300000;
+            handler.postDelayed(new Runnable() {
+                public void run() {
+                    notificationManager.cancel(104);
+                }
+            }, delayInMilliseconds);
+        }
+
+        if (intent.getAction().equalsIgnoreCase("SixthPeriod")) {
+            builder.setContentText("Digital Signal Processing");
+            builder.setContentIntent(PendingIntent.getActivity(context, 105, new Intent(context, Tuesday.class), 0));
+            Notification notification = builder.build();
+            int notificationID = 105;
+            builder.setAutoCancel(true);
+            notificationManager.notify(notificationID, notification);
+
+            Handler handler = new Handler();
+            long delayInMilliseconds = 300000;
+            handler.postDelayed(new Runnable() {
+                public void run() {
+                    notificationManager.cancel(105);
                 }
             }, delayInMilliseconds);
         }
