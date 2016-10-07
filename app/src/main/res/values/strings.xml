@@ -10,4 +10,5 @@
     <string name="title_activity_wednesday">Wednesday</string>
     <string name="tuesday">TUESDAY</string>
     <string name="wednesday">WEDNESDAY</string>
+    <string name="action_settings">Settings</string>
 </resources>
