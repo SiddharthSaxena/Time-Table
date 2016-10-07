@@ -92,7 +92,36 @@ public class Monday extends AppCompatActivity
         calendar.set(2016, 3, 23, 20, 12, 0);
         alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), secondAlarmIntent);
         alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY * 7, secondAlarmIntent);
+
+        Intent thirdIntent = new Intent(this, MondayNotificationService.class);
+        secondIntent.setAction("ThirdPeriod");
+        PendingIntent thirdAlarmIntent = PendingIntent.getBroadcast(this, 101, secondIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+        calendar.set(2016, 3, 23, 20, 12, 0);
+        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), secondAlarmIntent);
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY * 7, secondAlarmIntent);
+
+        Intent fourthIntent = new Intent(this, MondayNotificationService.class);
+        secondIntent.setAction("FourthPeriod");
+        PendingIntent fourthAlarmIntent = PendingIntent.getBroadcast(this, 101, secondIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+        calendar.set(2016, 3, 23, 20, 12, 0);
+        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), secondAlarmIntent);
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY * 7, secondAlarmIntent);
+
+        Intent fifthIntent = new Intent(this, MondayNotificationService.class);
+        secondIntent.setAction("FifthPeriod");
+        PendingIntent fifthAlarmIntent = PendingIntent.getBroadcast(this, 101, secondIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+        calendar.set(2016, 3, 23, 20, 12, 0);
+        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), secondAlarmIntent);
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY * 7, secondAlarmIntent);
+
+        Intent sixthIntent = new Intent(this, MondayNotificationService.class);
+        secondIntent.setAction("SixthPeriod");
+        PendingIntent sixthAlarmIntent = PendingIntent.getBroadcast(this, 101, secondIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+        calendar.set(2016, 3, 23, 20, 12, 0);
+        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), secondAlarmIntent);
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY * 7, secondAlarmIntent);
     }
+
     public boolean onCreateOptionsMenu(Menu menu)
     {
         return true;
