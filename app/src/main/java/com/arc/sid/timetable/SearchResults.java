@@ -1,7 +1,7 @@
 package com.arc.sid.timetable;
 
-public class SearchResults
-{
+public class SearchResults {
+
     private String faculty = "";
     private String periodName = "";
     private String timing = "";
@@ -18,15 +18,15 @@ public class SearchResults
         return this.timing;
     }
 
-    public void setFaculty(String paramString) {
-        this.faculty = paramString;
+    public void setFaculty(String string) {
+        this.faculty = string;
     }
 
-    public void setPeriodName(String paramString) {
-        this.periodName = paramString;
+    public void setPeriodName(String string) {
+        this.periodName = string;
     }
 
-    public void setTiming(String paramString) {
-        this.timing = paramString;
+    public void setTiming(String string) {
+        this.timing = string;
     }
 }
