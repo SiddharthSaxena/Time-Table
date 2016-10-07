@@ -81,7 +81,7 @@ public class Wednesday
 
     public boolean onOptionsItemSelected(MenuItem paramMenuItem)
     {
-        if (paramMenuItem.getItemId() == 2131427438) {
+        if (paramMenuItem.getItemId() == R.id.action_settings) {
             return true;
         }
         return super.onOptionsItemSelected(paramMenuItem);
