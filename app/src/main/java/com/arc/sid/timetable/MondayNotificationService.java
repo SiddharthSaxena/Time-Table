@@ -21,9 +21,9 @@ public class MondayNotificationService extends BroadcastReceiver {
         if (intent.getAction().equalsIgnoreCase("FirstPeriod")) {
             builder.setContentText("Microwave Engineering");
             builder.setContentIntent(PendingIntent.getActivity(context, 100, new Intent(context, Monday.class), 0));
-            Notification notification = builder.build();
             builder.setAutoCancel(true);
             int notificationID = 100;
+            Notification notification = builder.build();
             notificationManager.notify(notificationID, notification);
 
             Handler handler = new Handler();
@@ -39,9 +39,9 @@ public class MondayNotificationService extends BroadcastReceiver {
         if (intent.getAction().equalsIgnoreCase("SecondPeriod")) {
             builder.setContentText("Digital Signal Processing");
             builder.setContentIntent(PendingIntent.getActivity(context, 101, new Intent(context, Monday.class), 0));
-            Notification notification = builder.build();
             int notificationID = 101;
             builder.setAutoCancel(true);
+            Notification notification = builder.build();
             notificationManager.notify(notificationID, notification);
 
             Handler handler = new Handler();
@@ -56,9 +56,9 @@ public class MondayNotificationService extends BroadcastReceiver {
         if (intent.getAction().equalsIgnoreCase("ThirdPeriod")) {
             builder.setContentText("Digital Signal Processing");
             builder.setContentIntent(PendingIntent.getActivity(context, 102, new Intent(context, Monday.class), 0));
-            Notification notification = builder.build();
             int notificationID = 102;
             builder.setAutoCancel(true);
+            Notification notification = builder.build();
             notificationManager.notify(notificationID, notification);
 
             Handler handler = new Handler();
@@ -73,9 +73,9 @@ public class MondayNotificationService extends BroadcastReceiver {
         if (intent.getAction().equalsIgnoreCase("FourthPeriod")) {
             builder.setContentText("Digital Signal Processing");
             builder.setContentIntent(PendingIntent.getActivity(context, 103, new Intent(context, Monday.class), 0));
-            Notification notification = builder.build();
             int notificationID = 103;
             builder.setAutoCancel(true);
+            Notification notification = builder.build();
             notificationManager.notify(notificationID, notification);
 
             Handler handler = new Handler();
@@ -90,9 +90,9 @@ public class MondayNotificationService extends BroadcastReceiver {
         if (intent.getAction().equalsIgnoreCase("FifthPeriod")) {
             builder.setContentText("Digital Signal Processing");
             builder.setContentIntent(PendingIntent.getActivity(context, 104, new Intent(context, Monday.class), 0));
-            Notification notification = builder.build();
             int notificationID = 104;
             builder.setAutoCancel(true);
+            Notification notification = builder.build();
             notificationManager.notify(notificationID, notification);
 
             Handler handler = new Handler();
@@ -107,9 +107,9 @@ public class MondayNotificationService extends BroadcastReceiver {
         if (intent.getAction().equalsIgnoreCase("SixthPeriod")) {
             builder.setContentText("Digital Signal Processing");
             builder.setContentIntent(PendingIntent.getActivity(context, 105, new Intent(context, Monday.class), 0));
-            Notification notification = builder.build();
             int notificationID = 105;
             builder.setAutoCancel(true);
+            Notification notification = builder.build();
             notificationManager.notify(notificationID, notification);
 
             Handler handler = new Handler();
