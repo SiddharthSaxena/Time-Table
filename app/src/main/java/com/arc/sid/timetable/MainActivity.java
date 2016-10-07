@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        setContentView(2130903066);
+        setContentView(R.layout.activity_main);
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public boolean onOptionsItemSelected(MenuItem menuItem) {
-        if (menuItem.getItemId() == 2131427438) {
+        if (menuItem.getItemId() == R.menu.menu_main) {
             return true;
         }
         return super.onOptionsItemSelected(menuItem);
