@@ -7,19 +7,19 @@ public class SearchResults {
     private String timing = "";
 
     public String getFaculty() {
-        return this.faculty;
+        return faculty;
     }
 
     public String getPeriodName() {
-        return this.periodName;
+        return periodName;
     }
 
     public String getTiming() {
-        return this.timing;
+        return timing;
     }
 
-    public void setFaculty(String string) {
-        this.faculty = string;
+    public void setFaculty(String name) {
+        this.faculty = name;
     }
 
     public void setPeriodName(String string) {
