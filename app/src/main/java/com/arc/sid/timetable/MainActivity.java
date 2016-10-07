@@ -39,9 +39,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public boolean onOptionsItemSelected(MenuItem menuItem) {
-        if (menuItem.getItemId() == R.menu.menu_main) {
-            return true;
-        }
-        return super.onOptionsItemSelected(menuItem);
+        return menuItem.getItemId() == R.id.action_settings || super.onOptionsItemSelected(menuItem);
     }
 }
