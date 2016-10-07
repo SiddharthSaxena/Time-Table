@@ -134,9 +134,6 @@ public class Monday extends AppCompatActivity {
     }
 
     public boolean onOptionsItemSelected(MenuItem menuItem) {
-        if (menuItem.getItemId() == R.id.action_settings) {
-            return true;
-        }
-        return super.onOptionsItemSelected(menuItem);
+        return menuItem.getItemId() == R.id.action_settings || super.onOptionsItemSelected(menuItem);
     }
 }
