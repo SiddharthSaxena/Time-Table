@@ -94,32 +94,32 @@ public class Monday extends AppCompatActivity
         alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY * 7, secondAlarmIntent);
 
         Intent thirdIntent = new Intent(this, MondayNotificationService.class);
-        secondIntent.setAction("ThirdPeriod");
-        PendingIntent thirdAlarmIntent = PendingIntent.getBroadcast(this, 102, secondIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+        thirdIntent.setAction("ThirdPeriod");
+        PendingIntent thirdAlarmIntent = PendingIntent.getBroadcast(this, 102, thirdIntent, PendingIntent.FLAG_UPDATE_CURRENT);
         calendar.set(2016, 3, 23, 20, 12, 0);
-        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), secondAlarmIntent);
-        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY * 7, secondAlarmIntent);
+        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), thirdAlarmIntent);
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY * 7, thirdAlarmIntent);
 
         Intent fourthIntent = new Intent(this, MondayNotificationService.class);
-        secondIntent.setAction("FourthPeriod");
-        PendingIntent fourthAlarmIntent = PendingIntent.getBroadcast(this, 103, secondIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+        fourthIntent.setAction("FourthPeriod");
+        PendingIntent fourthAlarmIntent = PendingIntent.getBroadcast(this, 103, fourthIntent, PendingIntent.FLAG_UPDATE_CURRENT);
         calendar.set(2016, 3, 23, 20, 12, 0);
-        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), secondAlarmIntent);
-        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY * 7, secondAlarmIntent);
+        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), fourthAlarmIntent);
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY * 7, fourthAlarmIntent);
 
         Intent fifthIntent = new Intent(this, MondayNotificationService.class);
-        secondIntent.setAction("FifthPeriod");
-        PendingIntent fifthAlarmIntent = PendingIntent.getBroadcast(this, 104, secondIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+        fifthIntent.setAction("FifthPeriod");
+        PendingIntent fifthAlarmIntent = PendingIntent.getBroadcast(this, 104, fifthIntent, PendingIntent.FLAG_UPDATE_CURRENT);
         calendar.set(2016, 3, 23, 20, 12, 0);
-        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), secondAlarmIntent);
-        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY * 7, secondAlarmIntent);
+        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), fifthAlarmIntent);
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY * 7, fifthAlarmIntent);
 
         Intent sixthIntent = new Intent(this, MondayNotificationService.class);
-        secondIntent.setAction("SixthPeriod");
-        PendingIntent sixthAlarmIntent = PendingIntent.getBroadcast(this, 105, secondIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+        sixthIntent.setAction("SixthPeriod");
+        PendingIntent sixthAlarmIntent = PendingIntent.getBroadcast(this, 105, sixthIntent, PendingIntent.FLAG_UPDATE_CURRENT);
         calendar.set(2016, 3, 23, 20, 12, 0);
-        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), secondAlarmIntent);
-        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY * 7, secondAlarmIntent);
+        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), sixthAlarmIntent);
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY * 7, sixthAlarmIntent);
     }
 
     public boolean onCreateOptionsMenu(Menu menu)
