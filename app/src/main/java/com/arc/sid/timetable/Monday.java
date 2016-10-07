@@ -129,7 +129,7 @@ public class Monday extends AppCompatActivity
 
     public boolean onOptionsItemSelected(MenuItem menuItem)
     {
-        if (menuItem.getItemId() == R.menu.menu_monday) {
+        if (menuItem.getItemId() == R.id.action_settings) {
             return true;
         }
         return super.onOptionsItemSelected(menuItem);
