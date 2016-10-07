@@ -1,5 +1,3 @@
-package com.arc.sid.timetable;
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,56 +5,55 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import com.arc.sid.timetable.R;
+import com.arc.sid.timetable.SearchResults;
+
 import java.util.ArrayList;
 
 public class CustomBaseAdapter extends BaseAdapter {
-
     private static ArrayList<SearchResults> searchArrayList;
+
     private LayoutInflater mInflater;
 
-    public CustomBaseAdapter(Context context, ArrayList<SearchResults> arrayList) {
-        searchArrayList = arrayList;
-        this.mInflater = LayoutInflater.from(context);
+    public CustomBaseAdapter(Context context, ArrayList<SearchResults> results) {
+        searchArrayList = results;
+        mInflater = LayoutInflater.from(context);
     }
 
-    public int getCount()
-    {
+    public int getCount() {
         return searchArrayList.size();
     }
 
-    public Object getItem(int paramInt)
-    {
-        return searchArrayList.get(paramInt);
+    public Object getItem(int position) {
+        return searchArrayList.get(position);
     }
 
-    public long getItemId(int paramInt)
-    {
-        return paramInt;
+    public long getItemId(int position) {
+        return position;
     }
 
-    public View getView(int paramInt, View view, ViewGroup viewGroup)
-    {
-        if (view == null)
-        {
-            view = this.mInflater.inflate(R.layout.custom_row_viewer, null);
-            viewGroup = new ViewHolder();
-            viewGroup.txtPeriodName = ((TextView)view.findViewById(R.id.periodName));
-            viewGroup.txtFaculty = ((TextView)view.findViewById(R.id.faculty));
-            viewGroup.txtTiming = ((TextView)view.findViewById(R.id.timing));
-            view.setTag(viewGroup);
+    public View getView(int position, View convertView, ViewGroup parent) {
+        ViewHolder holder;
+        if (convertView == null) {
+            convertView = mInflater.inflate(R.layout.custom_row_viewer, null);
+            holder = new ViewHolder();
+            holder.txtFaculty= (TextView) convertView.findViewById(R.id.faculty);
+            holder.txtPeriodName = (TextView) convertView.findViewById(R.id.periodName);
+            holder.txtTiming = (TextView) convertView.findViewById(R.id.timing);
+
+            convertView.setTag(holder);
+        } else {
+            holder = (ViewHolder) convertView.getTag();
         }
-        for (;;)
-        {
-            viewGroup.txtPeriodName.setText(((SearchResults)searchArrayList.get(paramInt)).getPeriodName());
-            viewGroup.txtFaculty.setText(((SearchResults)searchArrayList.get(paramInt)).getFaculty());
-            viewGroup.txtTiming.setText(((SearchResults)searchArrayList.get(paramInt)).getTiming());
-            return view;
-            viewGroup = (ViewHolder)view.getTag();
-        }
+
+        holder.txtFaculty.setText(searchArrayList.get(position).getFaculty());
+        holder.txtPeriodName.setText(searchArrayList.get(position).getPeriodName());
+        holder.txtTiming.setText(searchArrayList.get(position).getTiming());
+
+        return convertView;
     }
 
-    static class ViewHolder
-    {
+    static class ViewHolder {
         TextView txtFaculty;
         TextView txtPeriodName;
         TextView txtTiming;
