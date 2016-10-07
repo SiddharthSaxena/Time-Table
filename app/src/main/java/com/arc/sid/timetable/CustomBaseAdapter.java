@@ -14,10 +14,9 @@ public class CustomBaseAdapter extends BaseAdapter {
     private static ArrayList<SearchResults> searchArrayList;
     private LayoutInflater mInflater;
 
-    public CustomBaseAdapter(Context paramContext, ArrayList<SearchResults> paramArrayList)
-    {
-        searchArrayList = paramArrayList;
-        this.mInflater = LayoutInflater.from(paramContext);
+    public CustomBaseAdapter(Context context, ArrayList<SearchResults> arrayList) {
+        searchArrayList = arrayList;
+        this.mInflater = LayoutInflater.from(context);
     }
 
     public int getCount()
@@ -35,24 +34,24 @@ public class CustomBaseAdapter extends BaseAdapter {
         return paramInt;
     }
 
-    public View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
+    public View getView(int paramInt, View view, ViewGroup viewGroup)
     {
-        if (paramView == null)
+        if (view == null)
         {
-            paramView = this.mInflater.inflate(2130903071, null);
-            paramViewGroup = new ViewHolder();
-            paramViewGroup.txtPeriodName = ((TextView)paramView.findViewById(2131427422));
-            paramViewGroup.txtFaculty = ((TextView)paramView.findViewById(2131427423));
-            paramViewGroup.txtTiming = ((TextView)paramView.findViewById(2131427424));
-            paramView.setTag(paramViewGroup);
+            view = this.mInflater.inflate(2130903071, null);
+            viewGroup = new ViewHolder();
+            viewGroup.txtPeriodName = ((TextView)view.findViewById(2131427422));
+            viewGroup.txtFaculty = ((TextView)view.findViewById(2131427423));
+            viewGroup.txtTiming = ((TextView)view.findViewById(2131427424));
+            view.setTag(viewGroup);
         }
         for (;;)
         {
-            paramViewGroup.txtPeriodName.setText(((SearchResults)searchArrayList.get(paramInt)).getPeriodName());
-            paramViewGroup.txtFaculty.setText(((SearchResults)searchArrayList.get(paramInt)).getFaculty());
-            paramViewGroup.txtTiming.setText(((SearchResults)searchArrayList.get(paramInt)).getTiming());
-            return paramView;
-            paramViewGroup = (ViewHolder)paramView.getTag();
+            viewGroup.txtPeriodName.setText(((SearchResults)searchArrayList.get(paramInt)).getPeriodName());
+            viewGroup.txtFaculty.setText(((SearchResults)searchArrayList.get(paramInt)).getFaculty());
+            viewGroup.txtTiming.setText(((SearchResults)searchArrayList.get(paramInt)).getTiming());
+            return view;
+            viewGroup = (ViewHolder)view.getTag();
         }
     }
 
