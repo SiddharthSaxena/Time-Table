@@ -20,43 +20,45 @@ public class Monday extends AppCompatActivity {
 
     private ArrayList<SearchResults> GetSearchResults() {
 
-        ArrayList arrayList = new ArrayList();
+        ArrayList<SearchResults> results = new ArrayList<>();
+
         SearchResults searchResults = new SearchResults();
         searchResults.setPeriodName("Microwave Engineering");
         searchResults.setFaculty("Mr. Devraj Gautam");
         searchResults.setTiming("8:30 am - 9:10 am");
-        arrayList.add(searchResults);
+        results.add(searchResults);
 
         searchResults = new SearchResults();
         searchResults.setPeriodName("Digital Signal Processing");
         searchResults.setFaculty("Dr. Surender Dhiman");
         searchResults.setTiming("9:10 am - 10:05 am");
-        arrayList.add(searchResults);
+        results.add(searchResults);
 
         searchResults = new SearchResults();
         searchResults.setPeriodName("VLSI Design");
         searchResults.setFaculty("Dr. Rajiv Sharma");
         searchResults.setTiming("10:05 am - 11:00 am");
-        arrayList.add(searchResults);
+        results.add(searchResults);
 
         searchResults = new SearchResults();
         searchResults.setPeriodName("Lunch Break");
         searchResults.setFaculty("Break");
         searchResults.setTiming("11:00 am - 11:30 am");
-        arrayList.add(searchResults);
+        results.add(searchResults);
 
         searchResults = new SearchResults();
         searchResults.setPeriodName("Antenna and Wave Propagation");
         searchResults.setFaculty("Mrs. Medha Hooda");
         searchResults.setTiming("11:30 am - 12:25 pm");
-        arrayList.add(searchResults);
+        results.add(searchResults);
 
         searchResults = new SearchResults();
         searchResults.setPeriodName("Data Communication and Networking");
         searchResults.setFaculty("Mr. Davender Banga");
         searchResults.setTiming("12:25 pm - 1:20 pm");
-        arrayList.add(searchResults);
-        return arrayList;
+        results.add(searchResults);
+
+        return results;
     }
 
     @Override
