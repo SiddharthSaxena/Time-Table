@@ -20,38 +20,38 @@ public class Monday extends AppCompatActivity
 {
     private ArrayList<SearchResults> GetSearchResults()
     {
-        ArrayList localArrayList = new ArrayList();
-        SearchResults localSearchResults = new SearchResults();
-        localSearchResults.setPeriodName("Microwave Engineering");
-        localSearchResults.setFaculty("Mr. Devraj Gautam");
-        localSearchResults.setTiming("8:30 am - 9:10 am");
-        localArrayList.add(localSearchResults);
-        localSearchResults = new SearchResults();
-        localSearchResults.setPeriodName("Digital Signal Processing");
-        localSearchResults.setFaculty("Dr. Surender Dhiman");
-        localSearchResults.setTiming("9:10 am - 10:05 am");
-        localArrayList.add(localSearchResults);
-        localSearchResults = new SearchResults();
-        localSearchResults.setPeriodName("VLSI Design");
-        localSearchResults.setFaculty("Dr. Rajiv Sharma");
-        localSearchResults.setTiming("10:05 am - 11:00 am");
-        localArrayList.add(localSearchResults);
-        localSearchResults = new SearchResults();
-        localSearchResults.setPeriodName("Lunch Break");
-        localSearchResults.setFaculty("Break");
-        localSearchResults.setTiming("11:00 am - 11:30 am");
-        localArrayList.add(localSearchResults);
-        localSearchResults = new SearchResults();
-        localSearchResults.setPeriodName("Antenna and Wave Propagation");
-        localSearchResults.setFaculty("Mrs. Medha Hooda");
-        localSearchResults.setTiming("11:30 am - 12:25 pm");
-        localArrayList.add(localSearchResults);
-        localSearchResults = new SearchResults();
-        localSearchResults.setPeriodName("Data Communication and Networking");
-        localSearchResults.setFaculty("Mr. Davender Banga");
-        localSearchResults.setTiming("12:25 pm - 1:20 pm");
-        localArrayList.add(localSearchResults);
-        return localArrayList;
+        ArrayList arrayList = new ArrayList();
+        SearchResults searchResults = new SearchResults();
+        searchResults.setPeriodName("Microwave Engineering");
+        searchResults.setFaculty("Mr. Devraj Gautam");
+        searchResults.setTiming("8:30 am - 9:10 am");
+        arrayList.add(searchResults);
+        searchResults = new SearchResults();
+        searchResults.setPeriodName("Digital Signal Processing");
+        searchResults.setFaculty("Dr. Surender Dhiman");
+        searchResults.setTiming("9:10 am - 10:05 am");
+        arrayList.add(searchResults);
+        searchResults = new SearchResults();
+        searchResults.setPeriodName("VLSI Design");
+        searchResults.setFaculty("Dr. Rajiv Sharma");
+        searchResults.setTiming("10:05 am - 11:00 am");
+        arrayList.add(searchResults);
+        searchResults = new SearchResults();
+        searchResults.setPeriodName("Lunch Break");
+        searchResults.setFaculty("Break");
+        searchResults.setTiming("11:00 am - 11:30 am");
+        arrayList.add(searchResults);
+        searchResults = new SearchResults();
+        searchResults.setPeriodName("Antenna and Wave Propagation");
+        searchResults.setFaculty("Mrs. Medha Hooda");
+        searchResults.setTiming("11:30 am - 12:25 pm");
+        arrayList.add(searchResults);
+        searchResults = new SearchResults();
+        searchResults.setPeriodName("Data Communication and Networking");
+        searchResults.setFaculty("Mr. Davender Banga");
+        searchResults.setTiming("12:25 pm - 1:20 pm");
+        arrayList.add(searchResults);
+        return arrayList;
     }
 
     @Override
@@ -93,16 +93,16 @@ public class Monday extends AppCompatActivity
         alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), secondAlarmIntent);
         alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY * 7, secondAlarmIntent);
     }
-    public boolean onCreateOptionsMenu(Menu paramMenu)
+    public boolean onCreateOptionsMenu(Menu menu)
     {
         return true;
     }
 
-    public boolean onOptionsItemSelected(MenuItem paramMenuItem)
+    public boolean onOptionsItemSelected(MenuItem menuItem)
     {
-        if (paramMenuItem.getItemId() == 2131427438) {
+        if (menuItem.getItemId() == R.menu.menu_monday) {
             return true;
         }
-        return super.onOptionsItemSelected(paramMenuItem);
+        return super.onOptionsItemSelected(menuItem);
     }
 }
