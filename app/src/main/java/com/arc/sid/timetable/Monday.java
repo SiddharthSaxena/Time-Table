@@ -16,10 +16,10 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.Calendar;
 
-public class Monday extends AppCompatActivity
-{
-    private ArrayList<SearchResults> GetSearchResults()
-    {
+public class Monday extends AppCompatActivity {
+
+    private ArrayList<SearchResults> GetSearchResults() {
+
         ArrayList arrayList = new ArrayList();
         SearchResults searchResults = new SearchResults();
         searchResults.setPeriodName("Microwave Engineering");
