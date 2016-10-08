@@ -91,11 +91,11 @@ public class Monday extends AppCompatActivity {
         firstIntent.setAction("FirstPeriod");
         PendingIntent firstAlarmIntent = PendingIntent.getBroadcast(this, 100, firstIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 //        calendar.set(13, 47, 0);
-        calendar.set(Calendar.HOUR_OF_DAY, 16);
-        calendar.set(Calendar.MINUTE, 46);
+        calendar.set(Calendar.HOUR_OF_DAY, 23);
+        calendar.set(Calendar.MINUTE, 41);
         calendar.set(Calendar.SECOND, 0);
         if(calendar.before(now)) {
-            calendar.add(Calendar.DATE, +1);
+            calendar.add(Calendar.DATE, 1);
         }
 //        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), firstAlarmIntent);
         alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, firstAlarmIntent);
@@ -104,11 +104,11 @@ public class Monday extends AppCompatActivity {
         secondIntent.setAction("SecondPeriod");
         PendingIntent secondAlarmIntent = PendingIntent.getBroadcast(this, 101, secondIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 //        calendar.set(13, 48, 0);
-        calendar.set(Calendar.HOUR_OF_DAY, 16);
-        calendar.set(Calendar.MINUTE, 47);
+        calendar.set(Calendar.HOUR_OF_DAY, 23);
+        calendar.set(Calendar.MINUTE, 42);
         calendar.set(Calendar.SECOND, 0);
         if(calendar.before(now)) {
-            calendar.add(Calendar.DATE, +1);
+            calendar.add(Calendar.DATE, 1);
         }
 //        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), secondAlarmIntent);
         alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, secondAlarmIntent);
@@ -117,11 +117,11 @@ public class Monday extends AppCompatActivity {
         thirdIntent.setAction("ThirdPeriod");
         PendingIntent thirdAlarmIntent = PendingIntent.getBroadcast(this, 102, thirdIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 //        calendar.set(13, 49, 0);
-        calendar.set(Calendar.HOUR_OF_DAY, 16);
-        calendar.set(Calendar.MINUTE, 48);
+        calendar.set(Calendar.HOUR_OF_DAY, 23);
+        calendar.set(Calendar.MINUTE, 43);
         calendar.set(Calendar.SECOND, 0);
         if(calendar.before(now)) {
-            calendar.add(Calendar.DATE, +1);
+            calendar.add(Calendar.DATE, 1);
         }
 //        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), thirdAlarmIntent);
         alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, thirdAlarmIntent);
@@ -130,11 +130,11 @@ public class Monday extends AppCompatActivity {
         fourthIntent.setAction("FourthPeriod");
         PendingIntent fourthAlarmIntent = PendingIntent.getBroadcast(this, 103, fourthIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 //        calendar.set(13, 50, 0);
-        calendar.set(Calendar.HOUR_OF_DAY, 16);
-        calendar.set(Calendar.MINUTE, 49);
+        calendar.set(Calendar.HOUR_OF_DAY, 23);
+        calendar.set(Calendar.MINUTE, 44);
         calendar.set(Calendar.SECOND, 0);
         if(calendar.before(now)) {
-            calendar.add(Calendar.DATE, +1);
+            calendar.add(Calendar.DATE, 1);
         }
 //        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), fourthAlarmIntent);
         alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, fourthAlarmIntent);
@@ -143,11 +143,11 @@ public class Monday extends AppCompatActivity {
         fifthIntent.setAction("FifthPeriod");
         PendingIntent fifthAlarmIntent = PendingIntent.getBroadcast(this, 104, fifthIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 //        calendar.set(13, 51, 0);
-        calendar.set(Calendar.HOUR_OF_DAY, 16);
-        calendar.set(Calendar.MINUTE, 50);
+        calendar.set(Calendar.HOUR_OF_DAY, 23);
+        calendar.set(Calendar.MINUTE, 45);
         calendar.set(Calendar.SECOND, 0);
         if(calendar.before(now)) {
-            calendar.add(Calendar.DATE, +1);
+            calendar.add(Calendar.DATE, 1);
         }
 //        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), fifthAlarmIntent);
         alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, fifthAlarmIntent);
@@ -156,11 +156,11 @@ public class Monday extends AppCompatActivity {
         sixthIntent.setAction("SixthPeriod");
         PendingIntent sixthAlarmIntent = PendingIntent.getBroadcast(this, 105, sixthIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 //        calendar.set(13, 52, 0);
-        calendar.set(Calendar.HOUR_OF_DAY, 16);
-        calendar.set(Calendar.MINUTE, 51);
+        calendar.set(Calendar.HOUR_OF_DAY, 23);
+        calendar.set(Calendar.MINUTE, 46);
         calendar.set(Calendar.SECOND, 0);
         if(calendar.before(now)) {
-            calendar.add(Calendar.DATE, +1);
+            calendar.add(Calendar.DATE, 1);
         }
 //        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), sixthAlarmIntent);
         alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, sixthAlarmIntent);
