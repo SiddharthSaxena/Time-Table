@@ -27,7 +27,7 @@ public class MondayNotificationService extends BroadcastReceiver {
             notificationManager.notify(notificationID, notification);
 
             Handler handler = new Handler();
-            long delayInMilliseconds = 300000;
+            long delayInMilliseconds = 6000;
             handler.postDelayed(new Runnable() {
                 public void run() {
                     notificationManager.cancel(100);
@@ -45,7 +45,7 @@ public class MondayNotificationService extends BroadcastReceiver {
             notificationManager.notify(notificationID, notification);
 
             Handler handler = new Handler();
-            long delayInMilliseconds = 300000;
+            long delayInMilliseconds = 6000;
             handler.postDelayed(new Runnable() {
                 public void run() {
                     notificationManager.cancel(101);
@@ -62,7 +62,7 @@ public class MondayNotificationService extends BroadcastReceiver {
             notificationManager.notify(notificationID, notification);
 
             Handler handler = new Handler();
-            long delayInMilliseconds = 300000;
+            long delayInMilliseconds = 6000;
             handler.postDelayed(new Runnable() {
                 public void run() {
                     notificationManager.cancel(102);
@@ -79,7 +79,7 @@ public class MondayNotificationService extends BroadcastReceiver {
             notificationManager.notify(notificationID, notification);
 
             Handler handler = new Handler();
-            long delayInMilliseconds = 300000;
+            long delayInMilliseconds = 6000;
             handler.postDelayed(new Runnable() {
                 public void run() {
                     notificationManager.cancel(103);
@@ -96,7 +96,7 @@ public class MondayNotificationService extends BroadcastReceiver {
             notificationManager.notify(notificationID, notification);
 
             Handler handler = new Handler();
-            long delayInMilliseconds = 300000;
+            long delayInMilliseconds = 6000;
             handler.postDelayed(new Runnable() {
                 public void run() {
                     notificationManager.cancel(104);
@@ -113,7 +113,7 @@ public class MondayNotificationService extends BroadcastReceiver {
             notificationManager.notify(notificationID, notification);
 
             Handler handler = new Handler();
-            long delayInMilliseconds = 300000;
+            long delayInMilliseconds = 6000;
             handler.postDelayed(new Runnable() {
                 public void run() {
                     notificationManager.cancel(105);
