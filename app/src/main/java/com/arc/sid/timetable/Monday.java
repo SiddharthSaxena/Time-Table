@@ -90,49 +90,79 @@ public class Monday extends AppCompatActivity {
         firstIntent.setAction("FirstPeriod");
         PendingIntent firstAlarmIntent = PendingIntent.getBroadcast(this, 100, firstIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 //        calendar.set(13, 47, 0);
-        calendar.set(Calendar.HOUR_OF_DAY, 1);
-        calendar.set(Calendar.MINUTE, 52);
+        calendar.set(Calendar.HOUR_OF_DAY, 16);
+        calendar.set(Calendar.MINUTE, 46);
         calendar.set(Calendar.SECOND, 0);
         if(calendar.before(calendar)){
             calendar.add(Calendar.DATE, 1);
         }
-        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), firstAlarmIntent);
-        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY * 7, firstAlarmIntent);
+//        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), firstAlarmIntent);
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, firstAlarmIntent);
 
         Intent secondIntent = new Intent(this, MondayNotificationService.class);
         secondIntent.setAction("SecondPeriod");
         PendingIntent secondAlarmIntent = PendingIntent.getBroadcast(this, 101, secondIntent, PendingIntent.FLAG_UPDATE_CURRENT);
-        calendar.set(13, 48, 0);
-        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), secondAlarmIntent);
-        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY * 7, secondAlarmIntent);
+//        calendar.set(13, 48, 0);
+        calendar.set(Calendar.HOUR_OF_DAY, 16);
+        calendar.set(Calendar.MINUTE, 47);
+        calendar.set(Calendar.SECOND, 0);
+        if(calendar.before(calendar)){
+            calendar.add(Calendar.DATE, 1);
+        }
+//        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), secondAlarmIntent);
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, secondAlarmIntent);
 
         Intent thirdIntent = new Intent(this, MondayNotificationService.class);
         thirdIntent.setAction("ThirdPeriod");
         PendingIntent thirdAlarmIntent = PendingIntent.getBroadcast(this, 102, thirdIntent, PendingIntent.FLAG_UPDATE_CURRENT);
-        calendar.set(13, 49, 0);
-        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), thirdAlarmIntent);
-        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY * 7, thirdAlarmIntent);
+//        calendar.set(13, 49, 0);
+        calendar.set(Calendar.HOUR_OF_DAY, 16);
+        calendar.set(Calendar.MINUTE, 48);
+        calendar.set(Calendar.SECOND, 0);
+        if(calendar.before(calendar)){
+            calendar.add(Calendar.DATE, 1);
+        }
+//        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), thirdAlarmIntent);
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, thirdAlarmIntent);
 
         Intent fourthIntent = new Intent(this, MondayNotificationService.class);
         fourthIntent.setAction("FourthPeriod");
         PendingIntent fourthAlarmIntent = PendingIntent.getBroadcast(this, 103, fourthIntent, PendingIntent.FLAG_UPDATE_CURRENT);
-        calendar.set(13, 50, 0);
-        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), fourthAlarmIntent);
-        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY * 7, fourthAlarmIntent);
+//        calendar.set(13, 50, 0);
+        calendar.set(Calendar.HOUR_OF_DAY, 16);
+        calendar.set(Calendar.MINUTE, 49);
+        calendar.set(Calendar.SECOND, 0);
+        if(calendar.before(calendar)){
+            calendar.add(Calendar.DATE, 1);
+        }
+//        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), fourthAlarmIntent);
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, fourthAlarmIntent);
 
         Intent fifthIntent = new Intent(this, MondayNotificationService.class);
         fifthIntent.setAction("FifthPeriod");
         PendingIntent fifthAlarmIntent = PendingIntent.getBroadcast(this, 104, fifthIntent, PendingIntent.FLAG_UPDATE_CURRENT);
-        calendar.set(13, 51, 0);
-        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), fifthAlarmIntent);
-        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY * 7, fifthAlarmIntent);
+//        calendar.set(13, 51, 0);
+        calendar.set(Calendar.HOUR_OF_DAY, 16);
+        calendar.set(Calendar.MINUTE, 50);
+        calendar.set(Calendar.SECOND, 0);
+        if(calendar.before(calendar)){
+            calendar.add(Calendar.DATE, 1);
+        }
+//        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), fifthAlarmIntent);
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, fifthAlarmIntent);
 
         Intent sixthIntent = new Intent(this, MondayNotificationService.class);
         sixthIntent.setAction("SixthPeriod");
         PendingIntent sixthAlarmIntent = PendingIntent.getBroadcast(this, 105, sixthIntent, PendingIntent.FLAG_UPDATE_CURRENT);
-        calendar.set(13, 52, 0);
-        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), sixthAlarmIntent);
-        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY * 7, sixthAlarmIntent);
+//        calendar.set(13, 52, 0);
+        calendar.set(Calendar.HOUR_OF_DAY, 16);
+        calendar.set(Calendar.MINUTE, 51);
+        calendar.set(Calendar.SECOND, 0);
+        if(calendar.before(calendar)){
+            calendar.add(Calendar.DATE, 1);
+        }
+//        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), sixthAlarmIntent);
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, sixthAlarmIntent);
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
