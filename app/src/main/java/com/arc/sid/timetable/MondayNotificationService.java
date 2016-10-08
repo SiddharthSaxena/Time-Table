@@ -33,7 +33,6 @@ public class MondayNotificationService extends BroadcastReceiver {
                     notificationManager.cancel(100);
                 }
             }, delayInMilliseconds);
-
         }
 
         if (intent.getAction().equalsIgnoreCase("SecondPeriod")) {
