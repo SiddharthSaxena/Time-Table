@@ -19,7 +19,7 @@ public class MondayNotificationService extends BroadcastReceiver {
         builder.setContentTitle(context.getString(R.string.app_name));
 
         if (intent.getAction().equalsIgnoreCase("FirstPeriod")) {
-            builder.setContentText("Microwave Engineering");
+            builder.setContentText("A");
             builder.setContentIntent(PendingIntent.getActivity(context, 100, new Intent(context, Monday.class), 0));
             builder.setAutoCancel(true);
             int notificationID = 100;
@@ -37,7 +37,7 @@ public class MondayNotificationService extends BroadcastReceiver {
         }
 
         if (intent.getAction().equalsIgnoreCase("SecondPeriod")) {
-            builder.setContentText("Digital Signal Processing");
+            builder.setContentText("B");
             builder.setContentIntent(PendingIntent.getActivity(context, 101, new Intent(context, Monday.class), 0));
             int notificationID = 101;
             builder.setAutoCancel(true);
@@ -54,7 +54,7 @@ public class MondayNotificationService extends BroadcastReceiver {
         }
 
         if (intent.getAction().equalsIgnoreCase("ThirdPeriod")) {
-            builder.setContentText("Digital Signal Processing");
+            builder.setContentText("C");
             builder.setContentIntent(PendingIntent.getActivity(context, 102, new Intent(context, Monday.class), 0));
             int notificationID = 102;
             builder.setAutoCancel(true);
@@ -71,7 +71,7 @@ public class MondayNotificationService extends BroadcastReceiver {
         }
 
         if (intent.getAction().equalsIgnoreCase("FourthPeriod")) {
-            builder.setContentText("Digital Signal Processing");
+            builder.setContentText("D");
             builder.setContentIntent(PendingIntent.getActivity(context, 103, new Intent(context, Monday.class), 0));
             int notificationID = 103;
             builder.setAutoCancel(true);
@@ -88,7 +88,7 @@ public class MondayNotificationService extends BroadcastReceiver {
         }
 
         if (intent.getAction().equalsIgnoreCase("FifthPeriod")) {
-            builder.setContentText("Digital Signal Processing");
+            builder.setContentText("E");
             builder.setContentIntent(PendingIntent.getActivity(context, 104, new Intent(context, Monday.class), 0));
             int notificationID = 104;
             builder.setAutoCancel(true);
@@ -105,7 +105,7 @@ public class MondayNotificationService extends BroadcastReceiver {
         }
 
         if (intent.getAction().equalsIgnoreCase("SixthPeriod")) {
-            builder.setContentText("Digital Signal Processing");
+            builder.setContentText("F");
             builder.setContentIntent(PendingIntent.getActivity(context, 105, new Intent(context, Monday.class), 0));
             int notificationID = 105;
             builder.setAutoCancel(true);
