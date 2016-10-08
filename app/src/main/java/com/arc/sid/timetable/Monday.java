@@ -84,6 +84,7 @@ public class Monday extends AppCompatActivity {
 
         AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
         Calendar calendar = Calendar.getInstance();
+        Calendar now = Calendar.getInstance();
         calendar.setTimeInMillis(System.currentTimeMillis());
 
         Intent firstIntent = new Intent(this, MondayNotificationService.class);
@@ -93,8 +94,8 @@ public class Monday extends AppCompatActivity {
         calendar.set(Calendar.HOUR_OF_DAY, 16);
         calendar.set(Calendar.MINUTE, 46);
         calendar.set(Calendar.SECOND, 0);
-        if(calendar.before(calendar)){
-            calendar.add(Calendar.DATE, 1);
+        if(calendar.before(now)) {
+            calendar.add(Calendar.DATE, +1);
         }
 //        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), firstAlarmIntent);
         alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, firstAlarmIntent);
@@ -106,8 +107,8 @@ public class Monday extends AppCompatActivity {
         calendar.set(Calendar.HOUR_OF_DAY, 16);
         calendar.set(Calendar.MINUTE, 47);
         calendar.set(Calendar.SECOND, 0);
-        if(calendar.before(calendar)){
-            calendar.add(Calendar.DATE, 1);
+        if(calendar.before(now)) {
+            calendar.add(Calendar.DATE, +1);
         }
 //        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), secondAlarmIntent);
         alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, secondAlarmIntent);
@@ -119,8 +120,8 @@ public class Monday extends AppCompatActivity {
         calendar.set(Calendar.HOUR_OF_DAY, 16);
         calendar.set(Calendar.MINUTE, 48);
         calendar.set(Calendar.SECOND, 0);
-        if(calendar.before(calendar)){
-            calendar.add(Calendar.DATE, 1);
+        if(calendar.before(now)) {
+            calendar.add(Calendar.DATE, +1);
         }
 //        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), thirdAlarmIntent);
         alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, thirdAlarmIntent);
@@ -132,8 +133,8 @@ public class Monday extends AppCompatActivity {
         calendar.set(Calendar.HOUR_OF_DAY, 16);
         calendar.set(Calendar.MINUTE, 49);
         calendar.set(Calendar.SECOND, 0);
-        if(calendar.before(calendar)){
-            calendar.add(Calendar.DATE, 1);
+        if(calendar.before(now)) {
+            calendar.add(Calendar.DATE, +1);
         }
 //        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), fourthAlarmIntent);
         alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, fourthAlarmIntent);
@@ -145,8 +146,8 @@ public class Monday extends AppCompatActivity {
         calendar.set(Calendar.HOUR_OF_DAY, 16);
         calendar.set(Calendar.MINUTE, 50);
         calendar.set(Calendar.SECOND, 0);
-        if(calendar.before(calendar)){
-            calendar.add(Calendar.DATE, 1);
+        if(calendar.before(now)) {
+            calendar.add(Calendar.DATE, +1);
         }
 //        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), fifthAlarmIntent);
         alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, fifthAlarmIntent);
@@ -158,8 +159,8 @@ public class Monday extends AppCompatActivity {
         calendar.set(Calendar.HOUR_OF_DAY, 16);
         calendar.set(Calendar.MINUTE, 51);
         calendar.set(Calendar.SECOND, 0);
-        if(calendar.before(calendar)){
-            calendar.add(Calendar.DATE, 1);
+        if(calendar.before(now)) {
+            calendar.add(Calendar.DATE, +1);
         }
 //        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), sixthAlarmIntent);
         alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, sixthAlarmIntent);
