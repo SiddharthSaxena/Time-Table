@@ -2,7 +2,6 @@ package com.arc.sid.timetable;
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -82,90 +81,100 @@ public class Monday extends AppCompatActivity {
             }
         });
 
-        AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+//        AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+//        Calendar calendar = Calendar.getInstance();
+//        Calendar now = Calendar.getInstance();
+//        calendar.setTimeInMillis(System.currentTimeMillis());
+
+        Intent myIntent = new Intent(this , MondayNotificationService.class);
+        AlarmManager alarmManager = (AlarmManager)getSystemService(ALARM_SERVICE);
+        pendingIntent = PendingIntent.getService(this, 0, myIntent, 0);
+
         Calendar calendar = Calendar.getInstance();
-        Calendar now = Calendar.getInstance();
-        calendar.setTimeInMillis(System.currentTimeMillis());
+        calendar.set(Calendar.HOUR_OF_DAY, 12);
+        calendar.set(Calendar.MINUTE, 00);
+        calendar.set(Calendar.SECOND, 00);
 
-        Intent firstIntent = new Intent(this, MondayNotificationService.class);
-        firstIntent.setAction("FirstPeriod");
-        PendingIntent firstAlarmIntent = PendingIntent.getBroadcast(this, 100, firstIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), 24*60*60*1000 , pendingIntent);  //set repeating every 24 hours
+//        Intent firstIntent = new Intent(this, MondayNotificationService.class);
+//        firstIntent.setAction("FirstPeriod");
+//        PendingIntent firstAlarmIntent = PendingIntent.getBroadcast(this, 100, firstIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 //        calendar.set(13, 47, 0);
-        calendar.set(Calendar.HOUR_OF_DAY, 23);
-        calendar.set(Calendar.MINUTE, 41);
-        calendar.set(Calendar.SECOND, 0);
-        if(calendar.before(now)) {
-            calendar.add(Calendar.DATE, 1);
-        }
+//        calendar.set(Calendar.HOUR_OF_DAY, 23);
+//        calendar.set(Calendar.MINUTE, 41);
+//        calendar.set(Calendar.SECOND, 0);
+//        if(calendar.before(now)) {
+//            calendar.add(Calendar.DATE, 1);
+//        }
 //        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), firstAlarmIntent);
-        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, firstAlarmIntent);
+//        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, firstAlarmIntent);
 
-        Intent secondIntent = new Intent(this, MondayNotificationService.class);
-        secondIntent.setAction("SecondPeriod");
-        PendingIntent secondAlarmIntent = PendingIntent.getBroadcast(this, 101, secondIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+//        Intent secondIntent = new Intent(this, MondayNotificationService.class);
+//        secondIntent.setAction("SecondPeriod");
+//        PendingIntent secondAlarmIntent = PendingIntent.getBroadcast(this, 101, secondIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 //        calendar.set(13, 48, 0);
-        calendar.set(Calendar.HOUR_OF_DAY, 23);
-        calendar.set(Calendar.MINUTE, 42);
-        calendar.set(Calendar.SECOND, 0);
-        if(calendar.before(now)) {
-            calendar.add(Calendar.DATE, 1);
-        }
+//        calendar.set(Calendar.HOUR_OF_DAY, 23);
+//        calendar.set(Calendar.MINUTE, 42);
+//        calendar.set(Calendar.SECOND, 0);
+//        if(calendar.before(now)) {
+//            calendar.add(Calendar.DATE, 1);
+//        }
 //        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), secondAlarmIntent);
-        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, secondAlarmIntent);
-
-        Intent thirdIntent = new Intent(this, MondayNotificationService.class);
-        thirdIntent.setAction("ThirdPeriod");
-        PendingIntent thirdAlarmIntent = PendingIntent.getBroadcast(this, 102, thirdIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+//        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, secondAlarmIntent);
+//
+//        Intent thirdIntent = new Intent(this, MondayNotificationService.class);
+//        thirdIntent.setAction("ThirdPeriod");
+//        PendingIntent thirdAlarmIntent = PendingIntent.getBroadcast(this, 102, thirdIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 //        calendar.set(13, 49, 0);
-        calendar.set(Calendar.HOUR_OF_DAY, 23);
-        calendar.set(Calendar.MINUTE, 43);
-        calendar.set(Calendar.SECOND, 0);
-        if(calendar.before(now)) {
-            calendar.add(Calendar.DATE, 1);
-        }
+//        calendar.set(Calendar.HOUR_OF_DAY, 23);
+//        calendar.set(Calendar.MINUTE, 43);
+//        calendar.set(Calendar.SECOND, 0);
+//        if(calendar.before(now)) {
+//            calendar.add(Calendar.DATE, 1);
+//        }
 //        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), thirdAlarmIntent);
-        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, thirdAlarmIntent);
-
-        Intent fourthIntent = new Intent(this, MondayNotificationService.class);
-        fourthIntent.setAction("FourthPeriod");
-        PendingIntent fourthAlarmIntent = PendingIntent.getBroadcast(this, 103, fourthIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+//        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, thirdAlarmIntent);
+//
+//        Intent fourthIntent = new Intent(this, MondayNotificationService.class);
+//        fourthIntent.setAction("FourthPeriod");
+//        PendingIntent fourthAlarmIntent = PendingIntent.getBroadcast(this, 103, fourthIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 //        calendar.set(13, 50, 0);
-        calendar.set(Calendar.HOUR_OF_DAY, 23);
-        calendar.set(Calendar.MINUTE, 44);
-        calendar.set(Calendar.SECOND, 0);
-        if(calendar.before(now)) {
-            calendar.add(Calendar.DATE, 1);
-        }
+//        calendar.set(Calendar.HOUR_OF_DAY, 23);
+//        calendar.set(Calendar.MINUTE, 44);
+//        calendar.set(Calendar.SECOND, 0);
+//        if(calendar.before(now)) {
+//            calendar.add(Calendar.DATE, 1);
+//        }
 //        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), fourthAlarmIntent);
-        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, fourthAlarmIntent);
-
-        Intent fifthIntent = new Intent(this, MondayNotificationService.class);
-        fifthIntent.setAction("FifthPeriod");
-        PendingIntent fifthAlarmIntent = PendingIntent.getBroadcast(this, 104, fifthIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+//        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, fourthAlarmIntent);
+//
+//        Intent fifthIntent = new Intent(this, MondayNotificationService.class);
+//        fifthIntent.setAction("FifthPeriod");
+//        PendingIntent fifthAlarmIntent = PendingIntent.getBroadcast(this, 104, fifthIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 //        calendar.set(13, 51, 0);
-        calendar.set(Calendar.HOUR_OF_DAY, 23);
-        calendar.set(Calendar.MINUTE, 45);
-        calendar.set(Calendar.SECOND, 0);
-        if(calendar.before(now)) {
-            calendar.add(Calendar.DATE, 1);
+//        calendar.set(Calendar.HOUR_OF_DAY, 23);
+//        calendar.set(Calendar.MINUTE, 45);
+//        calendar.set(Calendar.SECOND, 0);
+//        if(calendar.before(now)) {
+//            calendar.add(Calendar.DATE, 1);
         }
 //        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), fifthAlarmIntent);
-        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, fifthAlarmIntent);
-
-        Intent sixthIntent = new Intent(this, MondayNotificationService.class);
-        sixthIntent.setAction("SixthPeriod");
-        PendingIntent sixthAlarmIntent = PendingIntent.getBroadcast(this, 105, sixthIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+//        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, fifthAlarmIntent);
+//
+//        Intent sixthIntent = new Intent(this, MondayNotificationService.class);
+//        sixthIntent.setAction("SixthPeriod");
+//        PendingIntent sixthAlarmIntent = PendingIntent.getBroadcast(this, 105, sixthIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 //        calendar.set(13, 52, 0);
-        calendar.set(Calendar.HOUR_OF_DAY, 23);
-        calendar.set(Calendar.MINUTE, 46);
-        calendar.set(Calendar.SECOND, 0);
-        if(calendar.before(now)) {
-            calendar.add(Calendar.DATE, 1);
-        }
+//        calendar.set(Calendar.HOUR_OF_DAY, 23);
+//        calendar.set(Calendar.MINUTE, 46);
+//        calendar.set(Calendar.SECOND, 0);
+//        if(calendar.before(now)) {
+//            calendar.add(Calendar.DATE, 1);
+//        }
 //        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), sixthAlarmIntent);
-        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, sixthAlarmIntent);
-    }
-
+//        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, sixthAlarmIntent);
+//    }
+//
     public boolean onCreateOptionsMenu(Menu menu) {
         return true;
     }
