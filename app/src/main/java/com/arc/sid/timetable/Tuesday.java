@@ -17,6 +17,7 @@ import java.util.Calendar;
 
 public class Tuesday extends AppCompatActivity {
 
+//  Add Search Results to ArrayList.
     private ArrayList<SearchResults> GetSearchResults() {
 
         ArrayList<SearchResults> results = new ArrayList<>();
@@ -72,11 +73,13 @@ public class Tuesday extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tuesday);
 
+//      Add SearchResults to Monday list so that it can be displayed through Monday activity.
         ArrayList<SearchResults> searchResults = GetSearchResults();
 
         final ListView periods = (ListView) findViewById(R.id.tuesdayList);
         periods.setAdapter(new CustomBaseAdapter(this, searchResults));
 
+//      Create Toast when user clicks on item entry.
         periods.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
@@ -88,6 +91,7 @@ public class Tuesday extends AppCompatActivity {
             }
         });
 
+//      Display 1st period.
         Intent firstIntent = new Intent(this, TuesdayNotificationService.class);
         firstIntent.setAction("FirstPeriod");
         AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
@@ -105,6 +109,7 @@ public class Tuesday extends AppCompatActivity {
 
         alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), 7 * 24 * 60 * 60 * 1000, pendingIntent);
 
+//      Display 2nd period.
         Intent secondIntent = new Intent(this, TuesdayNotificationService.class);
         secondIntent.setAction("SecondPeriod");
         AlarmManager alarmManager2 = (AlarmManager) getSystemService(ALARM_SERVICE);
@@ -121,6 +126,7 @@ public class Tuesday extends AppCompatActivity {
 
         alarmManager2.setRepeating(AlarmManager.RTC_WAKEUP, calendar2.getTimeInMillis(), 7 * 24 * 60 * 60 * 1000, pendingIntent2);
 
+//      Display 3rd period.
         Intent thirdIntent = new Intent(this, TuesdayNotificationService.class);
         thirdIntent.setAction("ThirdPeriod");
         AlarmManager alarmManager3 = (AlarmManager) getSystemService(ALARM_SERVICE);
@@ -135,6 +141,7 @@ public class Tuesday extends AppCompatActivity {
             calendar3.add(Calendar.DATE, +7);
         }
 
+//      Display 4th period.
         alarmManager3.setRepeating(AlarmManager.RTC_WAKEUP, calendar3.getTimeInMillis(), 7 * 24 * 60 * 60 * 1000, pendingIntent3);
 
         Intent fourthIntent = new Intent(this, TuesdayNotificationService.class);
@@ -153,6 +160,7 @@ public class Tuesday extends AppCompatActivity {
 
         alarmManager4.setRepeating(AlarmManager.RTC_WAKEUP, calendar4.getTimeInMillis(), 7 * 24 * 60 * 60 * 1000, pendingIntent4);
 
+//      Display 5th period.
         Intent fifthIntent = new Intent(this, TuesdayNotificationService.class);
         fifthIntent.setAction("FifthPeriod");
         AlarmManager alarmManager5 = (AlarmManager) getSystemService(ALARM_SERVICE);
@@ -169,6 +177,7 @@ public class Tuesday extends AppCompatActivity {
 
         alarmManager5.setRepeating(AlarmManager.RTC_WAKEUP, calendar5.getTimeInMillis(), 7 * 24 * 60 * 60 * 1000, pendingIntent5);
 
+//      Display 6th period.
         Intent sixthIntent = new Intent(this, TuesdayNotificationService.class);
         sixthIntent.setAction("SixthPeriod");
         AlarmManager alarmManager6 = (AlarmManager) getSystemService(ALARM_SERVICE);
@@ -185,6 +194,7 @@ public class Tuesday extends AppCompatActivity {
 
         alarmManager6.setRepeating(AlarmManager.RTC_WAKEUP, calendar6.getTimeInMillis(), 7 * 24 * 60 * 60 * 1000, pendingIntent6);
 
+//      Display 7th period.
         Intent seventhIntent = new Intent(this, TuesdayNotificationService.class);
         seventhIntent.setAction("SeventhPeriod");
         AlarmManager alarmManager7 = (AlarmManager) getSystemService(ALARM_SERVICE);

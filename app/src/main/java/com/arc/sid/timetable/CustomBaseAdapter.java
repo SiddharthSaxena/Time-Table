@@ -34,6 +34,8 @@ public class CustomBaseAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder holder;
         if (convertView == null) {
+
+//          Display results with format from custom_row_viewer.xml.
             convertView = mInflater.inflate(R.layout.custom_row_viewer, null);
             holder = new ViewHolder();
             holder.txtFaculty= (TextView) convertView.findViewById(R.id.faculty);
