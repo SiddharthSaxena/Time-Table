@@ -19,7 +19,7 @@ public class MondayNotificationService extends BroadcastReceiver {
         builder.setContentTitle(context.getString(R.string.app_name));
 
         if (intent.getAction().equalsIgnoreCase("FirstPeriod")) {
-            builder.setContentText("First Lecture: Microwave Engineering begins in 5 minutes");
+            builder.setContentText("First Lecture: Optical Communication begins in 5 minutes");
             builder.setContentIntent(PendingIntent.getActivity(context, 100, new Intent(context, Monday.class), 0));
             builder.setAutoCancel(true);
             int notificationID = 100;
@@ -36,7 +36,7 @@ public class MondayNotificationService extends BroadcastReceiver {
         }
 
         if (intent.getAction().equalsIgnoreCase("SecondPeriod")) {
-            builder.setContentText("Next Lecture: Digital Signal Processing");
+            builder.setContentText("Next Lecture: RF Devices and Circuits");
             builder.setContentIntent(PendingIntent.getActivity(context, 101, new Intent(context, Monday.class), 0));
             int notificationID = 101;
             builder.setAutoCancel(true);
@@ -53,7 +53,7 @@ public class MondayNotificationService extends BroadcastReceiver {
         }
 
         if (intent.getAction().equalsIgnoreCase("ThirdPeriod")) {
-            builder.setContentText("Next Lecture: VLSI Design");
+            builder.setContentText("Next Lecture: Radar and Navigation");
             builder.setContentIntent(PendingIntent.getActivity(context, 102, new Intent(context, Monday.class), 0));
             int notificationID = 102;
             builder.setAutoCancel(true);
@@ -87,7 +87,7 @@ public class MondayNotificationService extends BroadcastReceiver {
         }
 
         if (intent.getAction().equalsIgnoreCase("FifthPeriod")) {
-            builder.setContentText("Next Lecture: Antenna and Wave Propagation");
+            builder.setContentText("Next Lecture: RF Devices and Circuits");
             builder.setContentIntent(PendingIntent.getActivity(context, 104, new Intent(context, Monday.class), 0));
             int notificationID = 104;
             builder.setAutoCancel(true);
@@ -99,23 +99,6 @@ public class MondayNotificationService extends BroadcastReceiver {
             handler.postDelayed(new Runnable() {
                 public void run() {
                     notificationManager.cancel(104);
-                }
-            }, delayInMilliseconds);
-        }
-
-        if (intent.getAction().equalsIgnoreCase("SixthPeriod")) {
-            builder.setContentText("Last Lecture: Data Communication and Networking");
-            builder.setContentIntent(PendingIntent.getActivity(context, 105, new Intent(context, Monday.class), 0));
-            int notificationID = 105;
-            builder.setAutoCancel(true);
-            Notification notification = builder.build();
-            notificationManager.notify(notificationID, notification);
-
-            Handler handler = new Handler();
-            long delayInMilliseconds = 300000;
-            handler.postDelayed(new Runnable() {
-                public void run() {
-                    notificationManager.cancel(105);
                 }
             }, delayInMilliseconds);
         }
