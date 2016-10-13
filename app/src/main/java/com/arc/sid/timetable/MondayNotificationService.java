@@ -87,7 +87,7 @@ public class MondayNotificationService extends BroadcastReceiver {
         }
 
         if (intent.getAction().equalsIgnoreCase("FifthPeriod")) {
-            builder.setContentText("Next Lecture: RF Devices and Circuits");
+            builder.setContentText("Last Lecture: RF Devices and Circuits");
             builder.setContentIntent(PendingIntent.getActivity(context, 104, new Intent(context, Monday.class), 0));
             int notificationID = 104;
             builder.setAutoCancel(true);

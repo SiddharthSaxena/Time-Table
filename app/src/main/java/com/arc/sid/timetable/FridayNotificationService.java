@@ -104,7 +104,7 @@ public class FridayNotificationService extends BroadcastReceiver {
         }
 
         if (intent.getAction().equalsIgnoreCase("FifthPeriod")) {
-            builder.setContentText("Wireless Communication");
+            builder.setContentText("Last Lecture: Wireless Communication");
             builder.setContentIntent(PendingIntent.getActivity(context, 505, new Intent(context, Friday.class), 0));
             int notificationID = 505;
             builder.setAutoCancel(true);
