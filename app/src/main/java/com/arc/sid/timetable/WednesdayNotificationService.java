@@ -87,7 +87,7 @@ public class WednesdayNotificationService extends BroadcastReceiver {
         }
 
         if (intent.getAction().equalsIgnoreCase("FifthPeriod")) {
-            builder.setContentText("Next Lecture: Radar and Navigation");
+            builder.setContentText("Last Lecture: Radar and Navigation");
             builder.setContentIntent(PendingIntent.getActivity(context, 304, new Intent(context, Wednesday.class), 0));
             int notificationID = 304;
             builder.setAutoCancel(true);
