@@ -10,7 +10,7 @@ import android.view.View;
 public class MainActivity extends AppCompatActivity {
 
     public void Friday(View view) {
-//        startActivity(new Intent(this, Friday.class));
+        startActivity(new Intent(this, Friday.class));
     }
 
     public void Monday(View view) {
@@ -18,15 +18,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void Thursday(View view) {
-//        startActivity(new Intent(this, Thursday.class));
+        startActivity(new Intent(this, Thursday.class));
     }
 
     public void Tuesday(View view) {
-//        startActivity(new Intent(this, Tuesday.class));
+        startActivity(new Intent(this, Tuesday.class));
     }
 
     public void Wednesday(View view) {
-//        startActivity(new Intent(this, Wednesday.class));
+        startActivity(new Intent(this, Wednesday.class));
     }
 
     protected void onCreate(Bundle bundle) {
