@@ -43,6 +43,8 @@ public class MondayNotificationService extends BroadcastReceiver {
             int notificationID = 101;
             builder.setAutoCancel(true);
             Notification notification = builder.build();
+            notification.defaults |= Notification.DEFAULT_VIBRATE;
+            notification.defaults |= Notification.DEFAULT_SOUND;
             notificationManager.notify(notificationID, notification);
 
             Handler handler = new Handler();
@@ -60,6 +62,8 @@ public class MondayNotificationService extends BroadcastReceiver {
             int notificationID = 102;
             builder.setAutoCancel(true);
             Notification notification = builder.build();
+            notification.defaults |= Notification.DEFAULT_VIBRATE;
+            notification.defaults |= Notification.DEFAULT_SOUND;
             notificationManager.notify(notificationID, notification);
 
             Handler handler = new Handler();
@@ -77,6 +81,8 @@ public class MondayNotificationService extends BroadcastReceiver {
             int notificationID = 103;
             builder.setAutoCancel(true);
             Notification notification = builder.build();
+            notification.defaults |= Notification.DEFAULT_VIBRATE;
+            notification.defaults |= Notification.DEFAULT_SOUND;
             notificationManager.notify(notificationID, notification);
 
             Handler handler = new Handler();
@@ -94,6 +100,8 @@ public class MondayNotificationService extends BroadcastReceiver {
             int notificationID = 104;
             builder.setAutoCancel(true);
             Notification notification = builder.build();
+            notification.defaults |= Notification.DEFAULT_VIBRATE;
+            notification.defaults |= Notification.DEFAULT_SOUND;
             notificationManager.notify(notificationID, notification);
 
             Handler handler = new Handler();

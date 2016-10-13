@@ -24,6 +24,8 @@ public class TuesdayNotificationService extends BroadcastReceiver {
             builder.setAutoCancel(true);
             int notificationID = 200;
             Notification notification = builder.build();
+            notification.defaults |= Notification.DEFAULT_VIBRATE;
+            notification.defaults |= Notification.DEFAULT_SOUND;
             notificationManager.notify(notificationID, notification);
 
             Handler handler = new Handler();
@@ -41,6 +43,8 @@ public class TuesdayNotificationService extends BroadcastReceiver {
             int notificationID = 201;
             builder.setAutoCancel(true);
             Notification notification = builder.build();
+            notification.defaults |= Notification.DEFAULT_VIBRATE;
+            notification.defaults |= Notification.DEFAULT_SOUND;
             notificationManager.notify(notificationID, notification);
 
             Handler handler = new Handler();
@@ -58,6 +62,8 @@ public class TuesdayNotificationService extends BroadcastReceiver {
             int notificationID = 202;
             builder.setAutoCancel(true);
             Notification notification = builder.build();
+            notification.defaults |= Notification.DEFAULT_VIBRATE;
+            notification.defaults |= Notification.DEFAULT_SOUND;
             notificationManager.notify(notificationID, notification);
 
             Handler handler = new Handler();
@@ -75,6 +81,8 @@ public class TuesdayNotificationService extends BroadcastReceiver {
             int notificationID = 203;
             builder.setAutoCancel(true);
             Notification notification = builder.build();
+            notification.defaults |= Notification.DEFAULT_VIBRATE;
+            notification.defaults |= Notification.DEFAULT_SOUND;
             notificationManager.notify(notificationID, notification);
 
             Handler handler = new Handler();
@@ -92,6 +100,8 @@ public class TuesdayNotificationService extends BroadcastReceiver {
             int notificationID = 204;
             builder.setAutoCancel(true);
             Notification notification = builder.build();
+            notification.defaults |= Notification.DEFAULT_VIBRATE;
+            notification.defaults |= Notification.DEFAULT_SOUND;
             notificationManager.notify(notificationID, notification);
 
             Handler handler = new Handler();
@@ -109,6 +119,8 @@ public class TuesdayNotificationService extends BroadcastReceiver {
             int notificationID = 205;
             builder.setAutoCancel(true);
             Notification notification = builder.build();
+            notification.defaults |= Notification.DEFAULT_VIBRATE;
+            notification.defaults |= Notification.DEFAULT_SOUND;
             notificationManager.notify(notificationID, notification);
 
             Handler handler = new Handler();
@@ -126,6 +138,8 @@ public class TuesdayNotificationService extends BroadcastReceiver {
             int notificationID = 206;
             builder.setAutoCancel(true);
             Notification notification = builder.build();
+            notification.defaults |= Notification.DEFAULT_VIBRATE;
+            notification.defaults |= Notification.DEFAULT_SOUND;
             notificationManager.notify(notificationID, notification);
 
             Handler handler = new Handler();
