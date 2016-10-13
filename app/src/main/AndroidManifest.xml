@@ -21,17 +21,12 @@
         android:logo="@drawable/icon"
         android:theme="@style/AppTheme">
 
-        <receiver android:name="com.arc.sid.timetable.MondayNotificationService"/>
-        <receiver android:name="com.arc.sid.timetable.TuesdayNotificationService"/>
-        <receiver android:name="com.arc.sid.timetable.WednesdayNotificationService"/>
-        <receiver android:name="com.arc.sid.timetable.ThursdayNotificationService"/>
-        <receiver android:name="com.arc.sid.timetable.FridayNotificationService"/>
 
         <activity
-            android:clearTaskOnLaunch="true"
-            android:label="@string/app_name"
-            android:name="com.arc.sid.timetable.MainActivity"
-            android:stateNotNeeded="true">
+        android:clearTaskOnLaunch="true"
+        android:label="@string/app_name"
+        android:name="com.arc.sid.timetable.MainActivity"
+        android:stateNotNeeded="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -39,49 +34,55 @@
         </activity>
 
         <activity
-            android:label="@string/title_activity_monday"
-            android:logo="@drawable/icon"
-            android:name="com.arc.sid.timetable.Monday"
-            android:parentActivityName="com.arc.sid.timetable.MainActivity">
+        android:label="@string/title_activity_monday"
+        android:logo="@drawable/icon"
+        android:name="com.arc.sid.timetable.Monday"
+        android:parentActivityName="com.arc.sid.timetable.MainActivity">
             <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.arc.sid.timetable.MainActivity"/>
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.arc.sid.timetable.MainActivity"/>
         </activity>
 
         <activity
-            android:label="@string/title_activity_tuesday"
-            android:name="com.arc.sid.timetable.Tuesday"
-            android:parentActivityName="com.arc.sid.timetable.MainActivity">
+        android:label="@string/title_activity_tuesday"
+        android:name="com.arc.sid.timetable.Tuesday"
+        android:parentActivityName="com.arc.sid.timetable.MainActivity">
             <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.arc.sid.timetable.MainActivity"/>
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.arc.sid.timetable.MainActivity"/>
         </activity>
 
         <activity
-            android:label="@string/title_activity_wednesday"
-            android:name="com.arc.sid.timetable.Wednesday"
-            android:parentActivityName="com.arc.sid.timetable.MainActivity">
+        android:label="@string/title_activity_wednesday"
+        android:name="com.arc.sid.timetable.Wednesday"
+        android:parentActivityName="com.arc.sid.timetable.MainActivity">
             <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.arc.sid.timetable.MainActivity"/>
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.arc.sid.timetable.MainActivity"/>
         </activity>
 
         <activity
-            android:label="@string/title_activity_thursday"
-            android:name="com.arc.sid.timetable.Thursday"
-            android:parentActivityName="com.arc.sid.timetable.MainActivity">
+        android:label="@string/title_activity_thursday"
+        android:name="com.arc.sid.timetable.Thursday"
+        android:parentActivityName="com.arc.sid.timetable.MainActivity">
             <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.arc.sid.timetable.MainActivity"/>
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.arc.sid.timetable.MainActivity"/>
         </activity>
 
         <activity
-            android:label="@string/title_activity_friday"
-            android:name="com.arc.sid.timetable.Friday"
-            android:parentActivityName="com.arc.sid.timetable.MainActivity">
+        android:label="@string/title_activity_friday"
+        android:name="com.arc.sid.timetable.Friday"
+        android:parentActivityName="com.arc.sid.timetable.MainActivity">
             <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.arc.sid.timetable.MainActivity"/>
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.arc.sid.timetable.MainActivity"/>
         </activity>
+
+        <receiver android:name="com.arc.sid.timetable.MondayNotificationService"/>
+        <receiver android:name="com.arc.sid.timetable.TuesdayNotificationService"/>
+        <receiver android:name="com.arc.sid.timetable.WednesdayNotificationService"/>
+        <receiver android:name="com.arc.sid.timetable.ThursdayNotificationService"/>
+        <receiver android:name="com.arc.sid.timetable.FridayNotificationService"/>
     </application>
 </manifest>
