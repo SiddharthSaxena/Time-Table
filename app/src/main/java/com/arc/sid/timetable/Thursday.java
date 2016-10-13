@@ -42,7 +42,7 @@ public class Thursday extends AppCompatActivity {
         results.add(searchResults);
 
         searchResults = new SearchResults();
-        searchResults.setPeriodName("Embedded Systems");
+        searchResults.setPeriodName("Embedded Systems Lab");
         searchResults.setFaculty("Mr. Gaurav Verma");
         searchResults.setTiming("11:30 am - 1:20 pm");
         results.add(searchResults);

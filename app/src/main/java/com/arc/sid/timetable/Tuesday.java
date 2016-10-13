@@ -26,7 +26,7 @@ public class Tuesday extends AppCompatActivity {
 
         searchResults.setPeriodName("Wireless Communication");
         searchResults.setFaculty("Mrs. Divya");
-        searchResults.setTiming("8:30 am - 9:10 am");
+        searchResults.setTiming("8:15 am - 9:10 am");
         results.add(searchResults);
 
         searchResults = new SearchResults();
@@ -60,8 +60,8 @@ public class Tuesday extends AppCompatActivity {
         results.add(searchResults);
 
         searchResults = new SearchResults();
-        searchResults.setPeriodName("Optical Communication");
-        searchResults.setFaculty("Mrs. Amrita Kaul");
+        searchResults.setPeriodName("Optical Communication Lab");
+        searchResults.setFaculty("Mrs. Richa");
         searchResults.setTiming("1:20 pm - 3:10 pm");
         results.add(searchResults);
 

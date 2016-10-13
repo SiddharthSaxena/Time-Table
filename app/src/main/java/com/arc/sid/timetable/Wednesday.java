@@ -26,7 +26,7 @@ public class Wednesday extends AppCompatActivity {
 
         searchResults.setPeriodName("RF Devices and Circuits");
         searchResults.setFaculty("Mr. Harsh");
-        searchResults.setTiming("8:30 am - 9:10 am");
+        searchResults.setTiming("8:15 am - 9:10 am");
         results.add(searchResults);
 
         searchResults = new SearchResults();

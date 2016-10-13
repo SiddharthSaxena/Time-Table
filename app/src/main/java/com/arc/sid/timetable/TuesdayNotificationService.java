@@ -121,7 +121,7 @@ public class TuesdayNotificationService extends BroadcastReceiver {
         }
 
         if (intent.getAction().equalsIgnoreCase("SeventhPeriod")) {
-            builder.setContentText("Last Lecture: Optical Communication");
+            builder.setContentText("Last Lecture: Optical Communication Lab");
             builder.setContentIntent(PendingIntent.getActivity(context, 206, new Intent(context, Tuesday.class), 0));
             int notificationID = 206;
             builder.setAutoCancel(true);

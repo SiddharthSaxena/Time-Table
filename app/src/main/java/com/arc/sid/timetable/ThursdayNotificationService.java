@@ -70,7 +70,7 @@ public class ThursdayNotificationService extends BroadcastReceiver {
         }
 
         if (intent.getAction().equalsIgnoreCase("FourthPeriod")) {
-            builder.setContentText("Embedded Systems");
+            builder.setContentText("Next Lecture: Embedded Systems Lab");
             builder.setContentIntent(PendingIntent.getActivity(context, 403, new Intent(context, Thursday.class), 0));
             int notificationID = 403;
             builder.setAutoCancel(true);

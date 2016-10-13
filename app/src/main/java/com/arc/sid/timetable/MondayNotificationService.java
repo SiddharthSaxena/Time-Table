@@ -24,6 +24,8 @@ public class MondayNotificationService extends BroadcastReceiver {
             builder.setAutoCancel(true);
             int notificationID = 100;
             Notification notification = builder.build();
+            notification.defaults |= Notification.DEFAULT_VIBRATE;
+            notification.defaults |= Notification.DEFAULT_SOUND;
             notificationManager.notify(notificationID, notification);
 
             Handler handler = new Handler();
