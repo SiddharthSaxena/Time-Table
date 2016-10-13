@@ -16,18 +16,14 @@
         android:xlargeScreens="true"/>
 
     <application
-        android:allowBackup="true"
         android:icon="@drawable/icon"
         android:label="@string/app_name"
         android:logo="@drawable/icon"
         android:theme="@style/AppTheme">
 
-
         <activity
-        android:clearTaskOnLaunch="true"
         android:label="@string/app_name"
-        android:name="com.arc.sid.timetable.MainActivity"
-        android:stateNotNeeded="true">
+        android:name="com.arc.sid.timetable.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
