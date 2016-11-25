@@ -40,7 +40,7 @@ public class Friday extends AppCompatActivity {
 
         SearchResults searchResults = new SearchResults();
 
-        searchResults.setPeriodName("RF Devices amd Circuits");
+        searchResults.setPeriodName("RF Devices and Circuits");
         searchResults.setFaculty("Mr. Harsh");
         searchResults.setTiming("8:15 am - 9:10 am");
         results.add(searchResults);
