@@ -6,9 +6,13 @@
   xmlns:android="http://schemas.android.com/apk/res/android">
 
     <TextView
-        android:textSize="17.0sp"
+        android:layout_width="wrap_content"
+        android:layout_height="7dp" />
+
+    <TextView
+        android:textSize="16.0sp"
         android:textStyle="bold"
-        android:textColor="#ff1cbc0e"
+        android:textColor="#212121"
         android:id="@+id/periodName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
@@ -25,4 +29,9 @@
         android:id="@+id/timing"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="7dp" />
+
 </LinearLayout>
