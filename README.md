@@ -47,4 +47,4 @@ GNU General Public License v3 (GPLv3). See the [LICENSE](https://github.com/Sidd
 
 ### Preview
 
-<img src="http://siddharthsaxena.weebly.com/files/theme/TimeTable.png" id="preview">
+<img src="http://siddharthsaxena.weebly.com/files/theme/time-table.png" id="preview">
